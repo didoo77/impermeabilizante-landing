@@ -6,18 +6,18 @@ mobileFix.textContent = `
   .site-header{padding:7px 18px!important;min-height:56px!important;}
   .brand img{width:38px!important;height:38px!important;}
   .brand{gap:8px!important;font-size:10px!important;letter-spacing:.055em!important;}
-  .hero{display:flex!important;flex-direction:column!important;gap:8px!important;min-height:auto!important;padding-top:13px!important;padding-bottom:22px!important;}
+  .hero{display:flex!important;flex-direction:column!important;gap:8px!important;min-height:auto!important;padding-top:12px!important;padding-bottom:22px!important;}
   .hero-copy{display:contents!important;}
-  .hero-copy .eyebrow{order:1!important;text-align:center!important;margin:0 0 4px!important;font-size:9.5px!important;letter-spacing:.2em!important;}
-  .hero-copy h1{order:2!important;font-size:clamp(30px,8.1vw,37px)!important;line-height:1.01!important;margin-bottom:5px!important;letter-spacing:-.048em!important;}
-  .hero-copy .hero-lead{order:3!important;font-size:14.5px!important;line-height:1.36!important;margin-bottom:0!important;}
-  .hero-visual{order:4!important;width:100%!important;margin:5px 0 0!important;}
-  .hero-card{max-width:100%!important;margin:0!important;transform:none!important;border-radius:22px!important;aspect-ratio:4/5!important;background:#f6fbfc!important;}
+  .hero-copy .eyebrow{order:1!important;text-align:center!important;margin:0 0 4px!important;font-size:9.3px!important;letter-spacing:.2em!important;}
+  .hero-copy h1{order:2!important;font-size:clamp(29px,7.9vw,36px)!important;line-height:1.01!important;margin-bottom:5px!important;letter-spacing:-.048em!important;}
+  .hero-copy .hero-lead{order:3!important;font-size:14.2px!important;line-height:1.34!important;margin-bottom:0!important;}
+  .hero-visual{order:4!important;width:100%!important;margin:4px 0 0!important;}
+  .hero-card{max-width:100%!important;margin:0!important;transform:none!important;border-radius:22px!important;aspect-ratio:4/4.72!important;background:#f6fbfc!important;}
   .hero-card img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center center!important;padding:0!important;}
   .hero-card:before{background:linear-gradient(135deg,rgba(255,255,255,.03),rgba(75,184,212,.03),rgba(245,166,35,.04))!important;}
   .hero-actions{order:5!important;margin:10px 0 8px!important;gap:8px!important;display:flex!important;flex-wrap:wrap!important;}
   .hero .hero-actions .btn-instagram,.hero .hero-actions .btn-facebook{display:none!important;}
-  .hero .hero-actions .btn-whatsapp{width:100%!important;min-height:48px!important;padding:11px 16px!important;font-size:15.5px!important;}
+  .hero .hero-actions .btn-whatsapp{width:100%!important;min-height:47px!important;padding:10px 16px!important;font-size:15.5px!important;}
   .final-cta .hero-actions .btn{width:100%!important;min-height:47px!important;padding:10px 16px!important;font-size:15px!important;}
   .social-chip{width:24px!important;height:24px!important;flex-basis:24px!important}.social-chip svg{width:17px!important;height:17px!important}.fb-chip{font-size:18px!important}
   .trust-row{order:6!important;gap:7px!important;margin:0!important;}
@@ -45,7 +45,8 @@ mobileFix.textContent = `
   .step p{font-size:15px!important;line-height:1.3!important;}
   details{padding:14px 16px!important;border-radius:16px!important;}
   summary{font-size:16px!important;}
-  .float-whatsapp{width:46px!important;height:46px!important;right:11px!important;bottom:11px!important;padding:0!important;border-radius:50%!important;display:grid!important;place-items:center!important;box-shadow:0 10px 22px rgba(37,211,102,.22)!important;opacity:.9!important;font-size:0!important;background:#25D366!important;}
+  .float-whatsapp{width:46px!important;height:46px!important;right:11px!important;bottom:11px!important;padding:0!important;border-radius:50%!important;display:grid!important;place-items:center!important;box-shadow:0 10px 22px rgba(37,211,102,.22)!important;opacity:0!important;pointer-events:none!important;transform:translateY(10px) scale(.94)!important;font-size:0!important;background:#25D366!important;transition:opacity .25s ease,transform .25s ease!important;}
+  body.hero-passed .float-whatsapp{opacity:.9!important;pointer-events:auto!important;transform:translateY(0) scale(1)!important;}
   .float-whatsapp:before{content:'';width:23px;height:23px;background:#073016;mask:url("data:image/svg+xml,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.04 3C8.86 3 3.02 8.84 3.02 16.02c0 2.3.6 4.54 1.74 6.51L3 29l6.64-1.71a13 13 0 0 0 6.4 1.63h.01c7.18 0 13.02-5.84 13.02-13.02S23.22 3 16.04 3zm7.57 18.58c-.32.9-1.86 1.72-2.58 1.78-.66.06-1.5.09-2.42-.15-.56-.14-1.28-.41-2.2-.8-3.86-1.67-6.38-5.54-6.57-5.8-.19-.25-1.57-2.09-1.57-3.99s.99-2.83 1.34-3.22c.35-.39.77-.49 1.03-.49h.74c.24.01.56-.09.87.67.32.78 1.09 2.69 1.19 2.88.1.19.16.42.03.67-.13.26-.2.42-.39.65-.19.23-.41.51-.58.68-.19.19-.39.4-.17.78.22.39.97 1.59 2.08 2.58 1.43 1.27 2.63 1.67 3.02 1.86.39.19.61.16.84-.1.23-.26.97-1.13 1.23-1.52.26-.39.52-.32.87-.19.35.13 2.24 1.06 2.62 1.25.39.19.65.29.74.45.1.16.1.94-.23 1.84z'/%3E%3C/svg%3E") center/contain no-repeat;}
   .float-label{display:none!important;}
   footer{padding:24px 20px 76px!important;display:block!important;}
@@ -56,8 +57,8 @@ mobileFix.textContent = `
   .footer-credit{margin-top:7px!important;display:block!important;}
 }
 @media(max-width:420px){
-  .hero-copy h1{font-size:31px!important;}
-  .hero-card{aspect-ratio:4/5!important;}
+  .hero-copy h1{font-size:30.5px!important;}
+  .hero-card{aspect-ratio:4/4.72!important;}
 }
 `;
 document.head.appendChild(mobileFix);
@@ -84,9 +85,9 @@ ensureIcon('.btn-facebook','fb-chip');
 const heroImg = document.querySelector('.hero-card img');
 const secondImg = document.querySelector('.photo-main');
 if(heroImg && secondImg){
-  heroImg.src = 'assets/stain.webp?v=11';
+  heroImg.src = 'assets/stain.webp?v=12';
   heroImg.alt = 'Impermeabilizante de tapices aplicado en sofá con derrame visible';
-  secondImg.src = 'assets/hero.webp?v=11';
+  secondImg.src = 'assets/hero.webp?v=12';
   secondImg.alt = 'Botella de impermeabilizante de tapices junto a gotas repelidas sobre una superficie textil';
 }
 const footer = document.querySelector('footer');
@@ -101,6 +102,16 @@ if(footer && !footer.querySelector('.footer-extra')){
   extra.innerHTML = '<span>© 2026 Impermeabilizante de Tapices. Todos los derechos reservados.</span><span class="footer-credit">Landing desarrollada por <strong>Lux Render</strong>.</span>';
   footer.appendChild(extra);
 }
+
+function updateFloatingCta(){
+  const hero = document.querySelector('.hero');
+  if(!hero) return;
+  const heroBottom = hero.getBoundingClientRect().bottom;
+  document.body.classList.toggle('hero-passed', heroBottom < 90);
+}
+window.addEventListener('scroll', updateFloatingCta, {passive:true});
+window.addEventListener('resize', updateFloatingCta);
+updateFloatingCta();
 
 const observer = new IntersectionObserver((entries)=>{
   entries.forEach(entry=>{ if(entry.isIntersecting){ entry.target.classList.add('in'); observer.unobserve(entry.target); } });
