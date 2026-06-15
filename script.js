@@ -1,6 +1,7 @@
 const mobileFix = document.createElement('style');
 mobileFix.textContent = `
 .facebook-icon{width:24px;height:24px;border-radius:50%;background:#1877F2;color:#fff;display:inline-grid;place-items:center;font-weight:900;font-family:Arial,sans-serif;font-size:18px;line-height:1}.btn-facebook{background:linear-gradient(135deg,#ffffff,#f4f8ff);border:1px solid rgba(24,119,242,.22);box-shadow:none;color:#0D2137}.btn-facebook:hover{box-shadow:0 16px 32px rgba(24,119,242,.14)}
+.hero-card img{object-fit:cover!important;object-position:center center!important}.photo-main{object-fit:contain!important;object-position:center center!important;background:linear-gradient(180deg,#f8f3ea,#f6fbfc)!important}.photo-stack{border-radius:28px;overflow:hidden;background:linear-gradient(180deg,#f8f3ea,#f6fbfc)}
 @media(max-width:900px){
   .site-header{padding:7px 18px!important;min-height:58px!important;}
   .brand img{width:39px!important;height:39px!important;}
@@ -28,6 +29,7 @@ mobileFix.textContent = `
   .benefit span{margin-bottom:6px!important;font-size:13px!important;}
   .benefit h3{font-size:18px!important;margin-bottom:4px!important;}
   .benefit p{font-size:14px!important;}
+  .photo-main{aspect-ratio:4/3!important;border-radius:22px!important;object-fit:contain!important;}
   .showcase{padding:32px 14px!important;}
   .showcase-card,.cta-card{border-radius:24px!important;}
   .showcase-card img,.cta-card img{min-height:255px!important;}
@@ -65,6 +67,14 @@ function makeFacebookButton(shortLabel = false){
 document.querySelectorAll('.hero-actions').forEach((actions, i)=>{
   if(!actions.querySelector('.btn-facebook')) actions.appendChild(makeFacebookButton(i > 0));
 });
+const heroImg = document.querySelector('.hero-card img');
+const secondImg = document.querySelector('.photo-main');
+if(heroImg && secondImg){
+  heroImg.src = 'assets/stain.webp';
+  heroImg.alt = 'Impermeabilizante de tapices aplicado en sofá con derrame visible';
+  secondImg.src = 'assets/hero.webp';
+  secondImg.alt = 'Botella de impermeabilizante de tapices junto a gotas repelidas sobre una superficie textil';
+}
 const footerPs = document.querySelectorAll('footer p');
 if(footerPs.length){
   footerPs[0].textContent = 'Impermeabilizante de Tapices · Protección textil premium.';
