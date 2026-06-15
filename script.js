@@ -11,8 +11,8 @@ mobileFix.textContent = `
   .hero-copy h1{order:2!important;font-size:clamp(32px,8.6vw,40px)!important;line-height:1!important;margin-bottom:8px!important;letter-spacing:-.05em!important;}
   .hero-copy .hero-lead{order:3!important;font-size:15.5px!important;line-height:1.4!important;margin-bottom:0!important;}
   .hero-visual{order:4!important;width:100%!important;margin:4px 0 0!important;}
-  .hero-card{max-width:100%!important;margin:0!important;transform:none!important;border-radius:22px!important;aspect-ratio:16/11.6!important;background:linear-gradient(180deg,#fff,#f6fbfc)!important;}
-  .hero-card img{object-fit:contain!important;object-position:center center!important;padding:0!important;}
+  .hero-card{max-width:100%!important;margin:0!important;transform:none!important;border-radius:22px!important;aspect-ratio:16/11!important;background:#f6fbfc!important;}
+  .hero-card img{object-fit:cover!important;object-position:center center!important;padding:0!important;}
   .hero-card:before{background:linear-gradient(135deg,rgba(255,255,255,.05),rgba(75,184,212,.04),rgba(245,166,35,.05))!important;}
   .hero-actions{order:5!important;margin:12px 0 8px!important;gap:8px!important;}
   .hero-actions .btn{width:100%!important;min-height:49px!important;padding:11px 16px!important;font-size:15.5px!important;}
@@ -47,7 +47,7 @@ mobileFix.textContent = `
 }
 @media(max-width:420px){
   .hero-copy h1{font-size:34px!important;}
-  .hero-card{aspect-ratio:16/11.8!important;}
+  .hero-card{aspect-ratio:16/11!important;}
 }
 `;
 document.head.appendChild(mobileFix);
