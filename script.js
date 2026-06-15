@@ -1,51 +1,75 @@
 const mobileFix = document.createElement('style');
 mobileFix.textContent = `
+.facebook-icon{width:24px;height:24px;border-radius:50%;background:#1877F2;color:#fff;display:inline-grid;place-items:center;font-weight:900;font-family:Arial,sans-serif;font-size:18px;line-height:1}.btn-facebook{background:linear-gradient(135deg,#ffffff,#f4f8ff);border:1px solid rgba(24,119,242,.22);box-shadow:none;color:#0D2137}.btn-facebook:hover{box-shadow:0 16px 32px rgba(24,119,242,.14)}
 @media(max-width:900px){
-  .site-header{padding:8px 18px!important;min-height:62px!important;}
-  .brand img{width:42px!important;height:42px!important;}
-  .brand{gap:8px!important;font-size:10.5px!important;letter-spacing:.06em!important;}
-  .hero{display:flex!important;flex-direction:column!important;gap:12px!important;min-height:auto!important;padding-top:20px!important;padding-bottom:30px!important;}
+  .site-header{padding:7px 18px!important;min-height:58px!important;}
+  .brand img{width:39px!important;height:39px!important;}
+  .brand{gap:8px!important;font-size:10px!important;letter-spacing:.055em!important;}
+  .hero{display:flex!important;flex-direction:column!important;gap:10px!important;min-height:auto!important;padding-top:18px!important;padding-bottom:28px!important;}
   .hero-copy{display:contents!important;}
-  .hero-copy .eyebrow{order:1!important;margin-bottom:8px!important;font-size:10.5px!important;letter-spacing:.21em!important;}
-  .hero-copy h1{order:2!important;font-size:clamp(34px,9.2vw,43px)!important;line-height:.98!important;margin-bottom:10px!important;letter-spacing:-.055em!important;}
-  .hero-copy .hero-lead{order:3!important;font-size:16px!important;line-height:1.42!important;margin-bottom:0!important;}
-  .hero-visual{order:4!important;width:100%!important;margin:2px 0 0!important;}
-  .hero-card{max-width:100%!important;margin:0!important;transform:none!important;border-radius:22px!important;aspect-ratio:16/10.7!important;}
-  .hero-card img{object-fit:cover!important;object-position:center 55%!important;}
-  .hero-actions{order:5!important;margin:14px 0 10px!important;gap:9px!important;}
-  .hero-actions .btn{width:100%!important;min-height:52px!important;padding:12px 18px!important;}
+  .hero-copy .eyebrow{order:1!important;text-align:center!important;margin:0 0 6px!important;font-size:10px!important;letter-spacing:.2em!important;}
+  .hero-copy h1{order:2!important;font-size:clamp(32px,8.6vw,40px)!important;line-height:1!important;margin-bottom:8px!important;letter-spacing:-.05em!important;}
+  .hero-copy .hero-lead{order:3!important;font-size:15.5px!important;line-height:1.4!important;margin-bottom:0!important;}
+  .hero-visual{order:4!important;width:100%!important;margin:4px 0 0!important;}
+  .hero-card{max-width:100%!important;margin:0!important;transform:none!important;border-radius:22px!important;aspect-ratio:16/11.6!important;background:linear-gradient(180deg,#fff,#f6fbfc)!important;}
+  .hero-card img{object-fit:contain!important;object-position:center center!important;padding:0!important;}
+  .hero-card:before{background:linear-gradient(135deg,rgba(255,255,255,.05),rgba(75,184,212,.04),rgba(245,166,35,.05))!important;}
+  .hero-actions{order:5!important;margin:12px 0 8px!important;gap:8px!important;}
+  .hero-actions .btn{width:100%!important;min-height:49px!important;padding:11px 16px!important;font-size:15.5px!important;}
   .trust-row{order:6!important;gap:7px!important;margin:0!important;}
-  .trust-row span,.audience-row span{font-size:12.5px!important;padding:8px 11px!important;}
-  .section-pad{padding:34px 20px!important;}
-  h2{font-size:clamp(30px,8.4vw,39px)!important;line-height:1.03!important;}
-  p{font-size:16px!important;line-height:1.46!important;}
-  .section-head{margin-bottom:22px!important;}
-  .benefit-grid{gap:10px!important;}
-  .benefit{padding:17px 18px!important;border-radius:18px!important;}
-  .benefit span{margin-bottom:7px!important;}
-  .benefit h3{font-size:19px!important;margin-bottom:5px!important;}
-  .benefit p{font-size:14.5px!important;}
-  .showcase{padding:34px 14px!important;}
+  .trust-row span,.audience-row span{font-size:12px!important;padding:7px 10px!important;}
+  .section-pad{padding:30px 20px!important;}
+  h2{font-size:clamp(28px,7.7vw,36px)!important;line-height:1.04!important;}
+  p{font-size:15.5px!important;line-height:1.44!important;}
+  .section-head{margin-bottom:20px!important;}
+  .copy-block p{font-size:15.5px!important;}
+  .benefit-grid{gap:9px!important;}
+  .benefit{padding:15px 17px!important;border-radius:18px!important;}
+  .benefit span{margin-bottom:6px!important;font-size:13px!important;}
+  .benefit h3{font-size:18px!important;margin-bottom:4px!important;}
+  .benefit p{font-size:14px!important;}
+  .showcase{padding:32px 14px!important;}
   .showcase-card,.cta-card{border-radius:24px!important;}
-  .showcase-card img,.cta-card img{min-height:270px!important;}
-  .showcase-card>div,.cta-card>div{padding:24px 20px!important;}
-  .steps{gap:9px!important;}
-  .step{grid-template-columns:44px 1fr!important;gap:10px!important;padding:12px 13px!important;border-radius:17px!important;}
-  .step strong{width:36px!important;height:36px!important;font-size:13px!important;}
-  .step p{font-size:15.5px!important;line-height:1.32!important;}
-  details{padding:15px 16px!important;border-radius:17px!important;}
-  summary{font-size:16.5px!important;}
-  .float-whatsapp{width:56px!important;height:56px!important;right:14px!important;bottom:14px!important;padding:0!important;border-radius:50%!important;display:grid!important;place-items:center!important;box-shadow:0 14px 32px rgba(37,211,102,.38)!important;}
-  .float-whatsapp .social-icon{width:28px!important;height:28px!important;}
+  .showcase-card img,.cta-card img{min-height:255px!important;}
+  .showcase-card>div,.cta-card>div{padding:22px 20px!important;}
+  .steps{gap:8px!important;}
+  .step{grid-template-columns:42px 1fr!important;gap:10px!important;padding:11px 12px!important;border-radius:16px!important;}
+  .step strong{width:34px!important;height:34px!important;font-size:12.5px!important;}
+  .step p{font-size:15px!important;line-height:1.3!important;}
+  details{padding:14px 16px!important;border-radius:16px!important;}
+  summary{font-size:16px!important;}
+  .float-whatsapp{width:50px!important;height:50px!important;right:12px!important;bottom:12px!important;padding:0!important;border-radius:50%!important;display:grid!important;place-items:center!important;box-shadow:0 10px 24px rgba(37,211,102,.28)!important;opacity:.94!important;}
+  .float-whatsapp .social-icon{width:25px!important;height:25px!important;}
   .float-label{display:none!important;}
-  footer{padding:26px 20px 92px!important;}
+  footer{padding:24px 20px 76px!important;align-items:flex-start!important;gap:14px!important;}
+  footer p{font-size:13.5px!important;line-height:1.42!important;}
+  .footer-brand{gap:10px!important}.footer-brand img{width:42px!important;height:42px!important;}
 }
 @media(max-width:420px){
-  .hero-copy h1{font-size:36px!important;}
-  .hero-card{aspect-ratio:16/10.2!important;}
+  .hero-copy h1{font-size:34px!important;}
+  .hero-card{aspect-ratio:16/11.8!important;}
 }
 `;
 document.head.appendChild(mobileFix);
+
+const facebookUrl = 'https://www.facebook.com/impermeabilizantedetapices/';
+function makeFacebookButton(shortLabel = false){
+  const a = document.createElement('a');
+  a.className = 'btn btn-ghost btn-facebook';
+  a.href = facebookUrl;
+  a.target = '_blank';
+  a.rel = 'noopener';
+  a.innerHTML = '<span class="facebook-icon" aria-hidden="true">f</span><span>' + (shortLabel ? 'Facebook' : 'Ver Facebook') + '</span>';
+  return a;
+}
+document.querySelectorAll('.hero-actions').forEach((actions, i)=>{
+  if(!actions.querySelector('.btn-facebook')) actions.appendChild(makeFacebookButton(i > 0));
+});
+const footerPs = document.querySelectorAll('footer p');
+if(footerPs.length){
+  footerPs[0].textContent = 'Impermeabilizante de Tapices · Protección textil premium.';
+  if(footerPs[1]) footerPs[1].textContent = 'V Región · Envíos a regiones · Venta directa por WhatsApp';
+}
 
 const observer = new IntersectionObserver((entries)=>{
   entries.forEach(entry=>{ if(entry.isIntersecting){ entry.target.classList.add('in'); observer.unobserve(entry.target); } });
