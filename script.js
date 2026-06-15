@@ -20,8 +20,9 @@ mobileFix.textContent = `
   .hero .hero-actions .btn-whatsapp{width:100%!important;min-height:47px!important;padding:10px 16px!important;font-size:15.5px!important;}
   .final-cta .hero-actions .btn{width:100%!important;min-height:47px!important;padding:10px 16px!important;font-size:15px!important;}
   .social-chip{width:24px!important;height:24px!important;flex-basis:24px!important}.social-chip svg{width:17px!important;height:17px!important}.fb-chip{font-size:18px!important}
-  .trust-row{order:6!important;gap:7px!important;margin:0!important;}
-  .trust-row span,.audience-row span{font-size:12px!important;padding:7px 10px!important;}
+  .trust-row{order:6!important;display:flex!important;flex-wrap:nowrap!important;justify-content:center!important;align-items:center!important;gap:5px!important;margin:0!important;width:100%!important;overflow:visible!important;}
+  .trust-row span{white-space:nowrap!important;flex:0 1 auto!important;font-size:10.8px!important;line-height:1!important;padding:6px 7px!important;letter-spacing:-.01em!important;}
+  .audience-row span{font-size:12px!important;padding:7px 10px!important;}
   .section-pad{padding:30px 20px!important;}
   h2{font-size:clamp(28px,7.7vw,36px)!important;line-height:1.04!important;}
   p{font-size:15.5px!important;line-height:1.44!important;}
@@ -47,7 +48,8 @@ mobileFix.textContent = `
   summary{font-size:16px!important;}
   .float-whatsapp{width:46px!important;height:46px!important;right:11px!important;bottom:11px!important;padding:0!important;border-radius:50%!important;display:grid!important;place-items:center!important;box-shadow:0 10px 22px rgba(37,211,102,.22)!important;opacity:0!important;pointer-events:none!important;transform:translateY(10px) scale(.94)!important;font-size:0!important;background:#25D366!important;transition:opacity .25s ease,transform .25s ease!important;}
   body.hero-passed .float-whatsapp{opacity:.9!important;pointer-events:auto!important;transform:translateY(0) scale(1)!important;}
-  .float-whatsapp:before{content:'';width:23px;height:23px;background:#073016;mask:url("data:image/svg+xml,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.04 3C8.86 3 3.02 8.84 3.02 16.02c0 2.3.6 4.54 1.74 6.51L3 29l6.64-1.71a13 13 0 0 0 6.4 1.63h.01c7.18 0 13.02-5.84 13.02-13.02S23.22 3 16.04 3zm7.57 18.58c-.32.9-1.86 1.72-2.58 1.78-.66.06-1.5.09-2.42-.15-.56-.14-1.28-.41-2.2-.8-3.86-1.67-6.38-5.54-6.57-5.8-.19-.25-1.57-2.09-1.57-3.99s.99-2.83 1.34-3.22c.35-.39.77-.49 1.03-.49h.74c.24.01.56-.09.87.67.32.78 1.09 2.69 1.19 2.88.1.19.16.42.03.67-.13.26-.2.42-.39.65-.19.23-.41.51-.58.68-.19.19-.39.4-.17.78.22.39.97 1.59 2.08 2.58 1.43 1.27 2.63 1.67 3.02 1.86.39.19.61.16.84-.1.23-.26.97-1.13 1.23-1.52.26-.39.52-.32.87-.19.35.13 2.24 1.06 2.62 1.25.39.19.65.29.74.45.1.16.1.94-.23 1.84z'/%3E%3C/svg%3E") center/contain no-repeat;}
+  .float-whatsapp .social-chip{background:transparent!important;width:24px!important;height:24px!important;flex-basis:24px!important;}
+  .float-whatsapp .social-chip svg{width:24px!important;height:24px!important;fill:#073016!important;}
   .float-label{display:none!important;}
   footer{padding:24px 20px 76px!important;display:block!important;}
   footer p{font-size:13px!important;line-height:1.55!important;}
@@ -59,6 +61,10 @@ mobileFix.textContent = `
 @media(max-width:420px){
   .hero-copy h1{font-size:30.5px!important;}
   .hero-card{aspect-ratio:4/4.72!important;}
+}
+@media(max-width:370px){
+  .trust-row{gap:4px!important;}
+  .trust-row span{font-size:10.2px!important;padding:6px 6px!important;}
 }
 `;
 document.head.appendChild(mobileFix);
@@ -81,13 +87,18 @@ function ensureIcon(selector, type){
 ensureIcon('.btn-whatsapp','wsp-chip');
 ensureIcon('.btn-instagram','ig-chip');
 ensureIcon('.btn-facebook','fb-chip');
+const floatBtn = document.querySelector('.float-whatsapp');
+if(floatBtn){
+  floatBtn.querySelectorAll('.social-chip').forEach(el=>el.remove());
+  floatBtn.prepend(icon('wsp-chip'));
+}
 
 const heroImg = document.querySelector('.hero-card img');
 const secondImg = document.querySelector('.photo-main');
 if(heroImg && secondImg){
-  heroImg.src = 'assets/stain.webp?v=12';
+  heroImg.src = 'assets/stain.webp?v=13';
   heroImg.alt = 'Impermeabilizante de tapices aplicado en sofá con derrame visible';
-  secondImg.src = 'assets/hero.webp?v=12';
+  secondImg.src = 'assets/hero.webp?v=13';
   secondImg.alt = 'Botella de impermeabilizante de tapices junto a gotas repelidas sobre una superficie textil';
 }
 const footer = document.querySelector('footer');
