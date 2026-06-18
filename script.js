@@ -1,11 +1,15 @@
 const mobileFix = document.createElement('style');
 mobileFix.textContent = `
 .social-chip{width:24px;height:24px;border-radius:50%;display:inline-grid;place-items:center;flex:0 0 24px;line-height:1;overflow:hidden}.social-chip svg{width:17px;height:17px;display:block}.wsp-chip{background:#25D366;color:#073016}.wsp-chip svg{fill:#073016}.ig-chip{background:radial-gradient(circle at 30% 110%,#fdf497 0%,#fdf497 13%,#fd5949 42%,#d6249f 62%,#285AEB 100%);color:#fff}.ig-chip svg{fill:none;stroke:#fff;stroke-width:2}.fb-chip{background:#1877F2;color:#fff;font-family:Arial,sans-serif;font-weight:900;font-size:18px}.btn-facebook{background:linear-gradient(135deg,#ffffff,#f4f8ff);border:1px solid rgba(24,119,242,.22);box-shadow:none;color:#0D2137}.btn-facebook:hover{box-shadow:0 16px 32px rgba(24,119,242,.14)}
+
+/* TapizSafe brand system */
+.site-header .tapizsafe-brand{display:inline-flex!important;align-items:center!important;gap:0!important;min-width:0!important;line-height:0!important}.site-header .tapizsafe-brand img{width:210px!important;height:52px!important;object-fit:contain!important;filter:none!important}.footer-brand img{width:220px!important;height:56px!important;object-fit:contain!important;filter:none!important}.footer-brand p{font-family:Inter,system-ui,sans-serif!important;font-size:14px!important;line-height:1.45!important;color:rgba(255,255,255,.7)!important;font-weight:500!important}
+
 .hero-card,.photo-stack{background:#f6fbfc!important;border-radius:28px;overflow:hidden}.hero-card img,.photo-main{object-fit:cover!important;object-position:center center!important;background:#f6fbfc!important}.footer-extra{width:100%;border-top:1px solid rgba(255,255,255,.10);margin-top:14px;padding-top:14px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:rgba(255,255,255,.42);font-size:11.5px;letter-spacing:.01em}.footer-credit{color:rgba(255,255,255,.48)}.footer-credit strong{color:rgba(255,255,255,.68);font-weight:700}
+
 @media(max-width:900px){
-  .site-header{padding:7px 18px!important;min-height:56px!important;}
-  .brand img{width:38px!important;height:38px!important;}
-  .brand{gap:8px!important;font-size:10px!important;letter-spacing:.055em!important;}
+  .site-header{padding:7px 18px!important;min-height:62px!important;}
+  .site-header .tapizsafe-brand img{width:151px!important;height:40px!important;}
   .hero{display:flex!important;flex-direction:column!important;gap:8px!important;min-height:auto!important;padding-top:12px!important;padding-bottom:22px!important;}
   .hero-copy{display:contents!important;}
   .hero-copy .eyebrow{order:1!important;text-align:center!important;margin:0 0 4px!important;font-size:9.3px!important;letter-spacing:.2em!important;}
@@ -53,19 +57,14 @@ mobileFix.textContent = `
   .float-label{display:none!important;}
   footer{padding:24px 20px 76px!important;display:block!important;}
   footer p{font-size:13px!important;line-height:1.55!important;}
-  .footer-brand{gap:10px!important;align-items:center!important;margin-bottom:12px!important}.footer-brand img{width:42px!important;height:42px!important;}
-  .footer-brand p{font-family:Inter,system-ui,sans-serif!important;font-size:13px!important;line-height:1.5!important;color:rgba(255,255,255,.64)!important;font-weight:500!important;}
+  footer .footer-brand{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:9px!important;margin-bottom:14px!important;}
+  footer .footer-brand img{width:174px!important;height:44px!important;}
+  footer .footer-brand p{font-size:13px!important;line-height:1.48!important;color:rgba(255,255,255,.64)!important;font-weight:500!important;}
   .footer-extra{font-size:11.5px!important;line-height:1.45!important;gap:8px!important;display:block!important;margin-top:14px!important;padding-top:14px!important;}
   .footer-credit{margin-top:7px!important;display:block!important;}
 }
-@media(max-width:420px){
-  .hero-copy h1{font-size:30.5px!important;}
-  .hero-card{aspect-ratio:4/4.72!important;}
-}
-@media(max-width:370px){
-  .trust-row{gap:4px!important;}
-  .trust-row span{font-size:10.2px!important;padding:6px 6px!important;}
-}
+@media(max-width:420px){.hero-copy h1{font-size:30.5px!important;}.hero-card{aspect-ratio:4/4.72!important;}}
+@media(max-width:370px){.trust-row{gap:4px!important;}.trust-row span{font-size:10.2px!important;padding:6px 6px!important;}}
 `;
 document.head.appendChild(mobileFix);
 
@@ -96,29 +95,29 @@ if(floatBtn){
 const heroImg = document.querySelector('.hero-card img');
 const secondImg = document.querySelector('.photo-main');
 if(heroImg && secondImg){
-  heroImg.src = 'assets/stain.webp?v=13';
+  heroImg.src = 'assets/stain.webp?v=14';
   heroImg.alt = 'Impermeabilizante de tapices aplicado en sofá con derrame visible';
-  secondImg.src = 'assets/hero.webp?v=13';
+  secondImg.src = 'assets/hero.webp?v=14';
   secondImg.alt = 'Botella de impermeabilizante de tapices junto a gotas repelidas sobre una superficie textil';
 }
+
 const footer = document.querySelector('footer');
 const footerPs = document.querySelectorAll('footer p');
 if(footerPs.length){
-  footerPs[0].textContent = 'Impermeabilizante de Tapices · Protección textil premium.';
+  footerPs[0].textContent = 'Protección textil premium para el uso real del hogar.';
   if(footerPs[1]) footerPs[1].textContent = 'V Región · Envíos a regiones · Venta directa por WhatsApp';
 }
 if(footer && !footer.querySelector('.footer-extra')){
   const extra = document.createElement('div');
   extra.className = 'footer-extra';
-  extra.innerHTML = '<span>© 2026 Impermeabilizante de Tapices. Todos los derechos reservados.</span><span class="footer-credit">Landing desarrollada por <strong>Lux Render</strong>.</span>';
+  extra.innerHTML = '<span>© 2026 TapizSafe. Todos los derechos reservados.</span><span class="footer-credit">Landing desarrollada por <strong>Lux Render</strong>.</span>';
   footer.appendChild(extra);
 }
 
 function updateFloatingCta(){
   const hero = document.querySelector('.hero');
   if(!hero) return;
-  const heroBottom = hero.getBoundingClientRect().bottom;
-  document.body.classList.toggle('hero-passed', heroBottom < 90);
+  document.body.classList.toggle('hero-passed', hero.getBoundingClientRect().bottom < 90);
 }
 window.addEventListener('scroll', updateFloatingCta, {passive:true});
 window.addEventListener('resize', updateFloatingCta);
