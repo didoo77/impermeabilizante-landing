@@ -1,7 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="TapizSafe">
-  <rect width="64" height="64" rx="15" fill="#071624"/>
-  <path d="M32 8 49 15v13c0 12-6.9 21.4-17 27C21.9 49.4 15 40 15 28V15Z" fill="none" stroke="#FFFFFF" stroke-width="4.2" stroke-linejoin="round"/>
-  <path d="M32 20c-5.7 7.1-9.1 11.8-9.1 17.1 0 5.4 4.1 9.6 9.1 9.6s9.1-4.2 9.1-9.6C41.1 31.8 37.7 27.1 32 20Z" fill="none" stroke="#16B8E8" stroke-width="4.1" stroke-linejoin="round"/>
-  <path d="M27.3 39.2c1.2 2.5 3.3 4 5.8 4" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
-  <path d="M45.3 18.2c1.3 3.1 1.4 6.2.2 9.2" fill="none" stroke="#F5A623" stroke-width="2.3" stroke-linecap="round"/>
+  <path d="M32 4 59 15v16.5c0 15.2-9.4 27.4-27 34.5C14.4 58.9 5 46.7 5 31.5V15Z" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M32 18c-6.6 8.3-10.7 14-10.7 20 0 6.5 4.8 11.7 10.7 11.7S42.7 44.5 42.7 38c0-6-4.1-11.7-10.7-20Z" fill="none" stroke="#16B8E8" stroke-width="4.5" stroke-linejoin="round"/>
+  <path d="M26.5 40.5c1.5 3.1 4.2 4.9 7.5 4.9" fill="none" stroke="#FFFFFF" stroke-width="3.2" stroke-linecap="round"/>
 </svg>
