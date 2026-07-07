@@ -6,6 +6,7 @@ mobileFix.textContent = `
 .site-header .tapizsafe-brand{display:inline-flex!important;align-items:center!important;gap:0!important;min-width:0!important;line-height:0!important}.site-header .tapizsafe-brand img{width:210px!important;height:52px!important;object-fit:contain!important;filter:none!important}.footer-brand img{width:220px!important;height:56px!important;object-fit:contain!important;filter:none!important}.footer-brand p{font-family:Inter,system-ui,sans-serif!important;font-size:14px!important;line-height:1.45!important;color:rgba(255,255,255,.7)!important;font-weight:500!important}
 
 .hero-card,.photo-stack{background:#f6fbfc!important;border-radius:28px;overflow:hidden}.hero-card img,.photo-main{object-fit:cover!important;object-position:center center!important;background:#f6fbfc!important}.footer-extra{width:100%;border-top:1px solid rgba(255,255,255,.10);margin-top:14px;padding-top:14px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:rgba(255,255,255,.42);font-size:11.5px;letter-spacing:.01em}.footer-credit{color:rgba(255,255,255,.48)}.footer-credit strong{color:rgba(255,255,255,.68);font-weight:700}
+.hero-proof-list{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:10px;max-width:560px}.hero-proof-list li{position:relative;display:flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid rgba(13,33,55,.10);border-radius:18px;background:rgba(255,255,255,.68);box-shadow:0 10px 28px rgba(13,33,55,.05);font-weight:800;color:#24364a;font-size:15px;line-height:1.25}.hero-proof-list li:before{content:'✓';display:inline-grid;place-items:center;flex:0 0 24px;width:24px;height:24px;border-radius:50%;background:rgba(75,184,212,.16);color:#0D2137;font-weight:900}.hero .hero-actions .btn-whatsapp{font-size:17px;min-height:56px;padding-left:24px;padding-right:24px}
 
 @media(max-width:900px){
   .site-header{padding:7px 18px!important;min-height:62px!important;}
@@ -15,16 +16,19 @@ mobileFix.textContent = `
   .hero-copy .eyebrow{order:1!important;text-align:center!important;margin:0 0 4px!important;font-size:9.3px!important;letter-spacing:.2em!important;}
   .hero-copy h1{order:2!important;font-size:clamp(29px,7.9vw,36px)!important;line-height:1.01!important;margin-bottom:5px!important;letter-spacing:-.048em!important;}
   .hero-copy .hero-lead{order:3!important;font-size:14.2px!important;line-height:1.34!important;margin-bottom:0!important;}
-  .hero-visual{order:4!important;width:100%!important;margin:4px 0 0!important;}
+  .hero-proof-list{order:4!important;width:100%!important;margin:8px 0 0!important;gap:6px!important;}
+  .hero-proof-list li{font-size:12.6px!important;line-height:1.15!important;padding:8px 10px!important;border-radius:14px!important;box-shadow:none!important;}
+  .hero-proof-list li:before{width:20px!important;height:20px!important;flex-basis:20px!important;font-size:13px!important;}
+  .hero-visual{order:5!important;width:100%!important;margin:4px 0 0!important;}
   .hero-card{max-width:100%!important;margin:0!important;transform:none!important;border-radius:22px!important;aspect-ratio:4/4.72!important;background:#f6fbfc!important;}
   .hero-card img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center center!important;padding:0!important;}
   .hero-card:before{background:linear-gradient(135deg,rgba(255,255,255,.03),rgba(75,184,212,.03),rgba(245,166,35,.04))!important;}
-  .hero-actions{order:5!important;margin:10px 0 8px!important;gap:8px!important;display:flex!important;flex-wrap:wrap!important;}
+  .hero-actions{order:6!important;margin:10px 0 8px!important;gap:8px!important;display:flex!important;flex-wrap:wrap!important;}
   .hero .hero-actions .btn-instagram,.hero .hero-actions .btn-facebook{display:none!important;}
   .hero .hero-actions .btn-whatsapp{width:100%!important;min-height:47px!important;padding:10px 16px!important;font-size:15.5px!important;}
   .final-cta .hero-actions .btn{width:100%!important;min-height:47px!important;padding:10px 16px!important;font-size:15px!important;}
   .social-chip{width:24px!important;height:24px!important;flex-basis:24px!important}.social-chip svg{width:17px!important;height:17px!important}.fb-chip{font-size:18px!important}
-  .trust-row{order:6!important;display:flex!important;flex-wrap:nowrap!important;justify-content:center!important;align-items:center!important;gap:5px!important;margin:0!important;width:100%!important;overflow:visible!important;}
+  .trust-row{order:7!important;display:flex!important;flex-wrap:nowrap!important;justify-content:center!important;align-items:center!important;gap:5px!important;margin:0!important;width:100%!important;overflow:visible!important;}
   .trust-row span{white-space:nowrap!important;flex:0 1 auto!important;font-size:10.8px!important;line-height:1!important;padding:6px 7px!important;letter-spacing:-.01em!important;}
   .audience-row span{font-size:12px!important;padding:7px 10px!important;}
   .section-pad{padding:30px 20px!important;}
@@ -64,7 +68,7 @@ mobileFix.textContent = `
   .footer-credit{margin-top:7px!important;display:block!important;}
 }
 @media(max-width:420px){.hero-copy h1{font-size:30.5px!important;}.hero-card{aspect-ratio:4/4.72!important;}}
-@media(max-width:370px){.trust-row{gap:4px!important;}.trust-row span{font-size:10.2px!important;padding:6px 6px!important;}}
+@media(max-width:370px){.trust-row{gap:4px!important;}.trust-row span{font-size:10.2px!important;padding:6px 6px!important;}.hero-proof-list li{font-size:12px!important;}}
 `;
 document.head.appendChild(mobileFix);
 
@@ -92,11 +96,8 @@ if(floatBtn){
   floatBtn.prepend(icon('wsp-chip'));
 }
 
-const heroImg = document.querySelector('.hero-card img');
 const secondImg = document.querySelector('.photo-main');
-if(heroImg && secondImg){
-  heroImg.src = 'assets/stain.webp?v=14';
-  heroImg.alt = 'Impermeabilizante de tapices aplicado en sofá con derrame visible';
+if(secondImg){
   secondImg.src = 'assets/hero.webp?v=14';
   secondImg.alt = 'Botella de impermeabilizante de tapices junto a gotas repelidas sobre una superficie textil';
 }
@@ -113,6 +114,22 @@ if(footer && !footer.querySelector('.footer-extra')){
   extra.innerHTML = '<span>© 2026 TapizSafe. Todos los derechos reservados.</span><span class="footer-credit">Landing desarrollada por <strong>Lux Render</strong>.</span>';
   footer.appendChild(extra);
 }
+
+function trackWhatsappClick(el){
+  const position = el.dataset.whatsappCta || (el.classList.contains('float-whatsapp') ? 'floating' : 'whatsapp');
+  if(typeof window.fbq === 'function'){
+    window.fbq('track','Contact',{content_name:'WhatsApp',cta_position:position});
+    window.fbq('trackCustom','WhatsAppClick',{cta_position:position});
+  }
+}
+const whatsappButtons = new Set([
+  ...document.querySelectorAll('[data-whatsapp-cta]'),
+  ...document.querySelectorAll('.btn-whatsapp'),
+  ...document.querySelectorAll('.float-whatsapp')
+]);
+whatsappButtons.forEach(btn=>{
+  btn.addEventListener('click',()=>trackWhatsappClick(btn),{passive:true});
+});
 
 function updateFloatingCta(){
   const hero = document.querySelector('.hero');
