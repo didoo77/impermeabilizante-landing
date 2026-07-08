@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=21" />
   <!-- Meta Pixel Code -->
   <script>
   !function(f,b,e,v,n,t,s)
@@ -65,10 +65,8 @@
         </div>
       </div>
       <div class="hero-visual reveal delay-1">
-        <div class="image-card hero-card hero-video-card">
-          <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/stain.webp?v=5" aria-label="Video de TapizSafe mostrando protección textil en sofá">
-            <source src="assets/tapizsafe-hero-muted.mp4?v=8" type="video/mp4" />
-          </video>
+        <div class="image-card hero-card">
+          <img src="assets/stain.webp?v=5" alt="Impermeabilizante de tapices aplicado en sofá con derrame visible" />
           <div class="halo"></div>
         </div>
       </div>
@@ -183,11 +181,8 @@
     <p>V Región · Envíos a regiones · Venta directa por WhatsApp</p>
   </footer>
 
-  <script src="script.js?v=18"></script>
+  <script src="script.js?v=19"></script>
   <style id="tapizsafe-fold-fix">
-    .hero-video-card{position:relative;overflow:hidden;background:#f6fbfc!important;}
-    .hero-video-card video,.hero-video{width:100%!important;height:100%!important;display:block!important;object-fit:cover!important;object-position:center center!important;background:#f6fbfc!important;}
-    .hero-video-card:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,.03),rgba(75,184,212,.04),rgba(245,166,35,.04));}
     .solution{position:relative!important;overflow:hidden!important;}
     .solution:before{content:'';position:absolute;right:-160px;top:90px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(75,184,212,.16),rgba(75,184,212,0) 68%);pointer-events:none;}
     .benefit-grid{gap:18px!important;}
@@ -233,7 +228,6 @@
       .hero-card{max-height:64vh!important;}
     }
     @media(max-width:900px){
-      .hero-video-card video,.hero-video{object-position:center center!important;}
       .benefit-grid{gap:12px!important;}
       .benefit{min-height:auto!important;padding:22px!important;border-radius:24px!important;}
       .benefit span{margin-bottom:16px!important;}
