@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=21" />
+  <link rel="stylesheet" href="styles.css?v=22" />
   <!-- Meta Pixel Code -->
   <script>
   !function(f,b,e,v,n,t,s)
@@ -35,8 +35,9 @@
 </head>
 <body>
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1702377558017324&ev=PageView&noscript=1" /></noscript>
-  <div class="ambient ambient-one"></div>
-  <div class="ambient ambient-two"></div>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="living-pulse" aria-hidden="true"></div>
 
   <header class="site-header" id="inicio">
     <a class="brand tapizsafe-brand" href="#inicio" aria-label="TapizSafe - Inicio">
@@ -83,7 +84,7 @@
           <p>La idea no es esperar el accidente. La idea es preparar el tapiz antes.</p>
         </div>
         <div class="photo-stack reveal delay-1">
-          <img class="photo-main" src="assets/hero.webp?v=5" alt="Botella de impermeabilizante de tapices junto a gotas repelidas sobre una superficie textil" />
+          <img class="photo-main" src="assets/hero.webp?v=14" alt="Botella de impermeabilizante de tapices junto a gotas repelidas sobre una superficie textil" />
           <div class="note-card">Prevenir siempre cuesta menos que recuperar.</div>
         </div>
       </div>
@@ -183,68 +184,6 @@
     <p>V Región · Envíos a regiones · Venta directa por WhatsApp</p>
   </footer>
 
-  <script src="script.js?v=19"></script>
-  <style id="tapizsafe-fold-fix">
-    .hero-video-card{position:relative!important;overflow:hidden!important;background:#f6fbfc!important;}
-    .hero-video-card video,.hero-video{width:100%!important;height:100%!important;display:block!important;object-fit:cover!important;object-position:center center!important;background:#f6fbfc!important;}
-    .hero-video-card:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,.03),rgba(75,184,212,.04),rgba(245,166,35,.04));}
-    .solution{position:relative!important;overflow:hidden!important;}
-    .solution:before{content:'';position:absolute;right:-160px;top:90px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(75,184,212,.16),rgba(75,184,212,0) 68%);pointer-events:none;}
-    .benefit-grid{gap:18px!important;}
-    .benefit{position:relative!important;overflow:hidden!important;padding:28px!important;min-height:214px!important;border:1px solid rgba(13,33,55,.10)!important;border-radius:30px!important;background:linear-gradient(145deg,rgba(255,255,255,.96),rgba(247,252,253,.82))!important;box-shadow:0 24px 60px rgba(13,33,55,.075)!important;isolation:isolate!important;}
-    .benefit:before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(13,33,55,.045),transparent 38%,rgba(75,184,212,.14));opacity:.8;z-index:-2;}
-    .benefit:after{content:'';position:absolute;right:-38px;top:-38px;width:122px;height:122px;border-radius:50%;background:radial-gradient(circle,rgba(75,184,212,.22),rgba(75,184,212,0) 66%);z-index:-1;}
-    .benefit span{display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:5px!important;width:auto!important;min-width:62px!important;height:34px!important;padding:0 12px!important;margin:0 0 22px!important;border-radius:999px!important;background:rgba(13,33,55,.96)!important;color:#fff!important;font-size:14px!important;font-weight:900!important;letter-spacing:.08em!important;box-shadow:0 12px 26px rgba(13,33,55,.16)!important;}
-    .benefit span:before{content:'Nº';font-size:9px;font-weight:900;letter-spacing:.1em;color:#4bb8d4;}
-    .benefit h3{font-size:22px!important;line-height:1.05!important;margin:0 0 12px!important;color:#0D2137!important;letter-spacing:-.03em!important;}
-    .benefit p{font-size:16px!important;line-height:1.55!important;color:#52657a!important;max-width:31ch!important;}
-    .benefit:hover{transform:translateY(-4px)!important;box-shadow:0 30px 76px rgba(13,33,55,.11)!important;}
-    .premium-steps{display:grid!important;gap:13px!important;}
-    .step{position:relative!important;overflow:hidden!important;grid-template-columns:86px 1fr!important;align-items:center!important;gap:18px!important;padding:20px 24px!important;border:1px solid rgba(13,33,55,.09)!important;border-radius:26px!important;background:linear-gradient(135deg,rgba(255,255,255,.97),rgba(248,252,253,.86))!important;box-shadow:0 16px 42px rgba(13,33,55,.055)!important;}
-    .step:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(75,184,212,.12),transparent 34%);opacity:.7;pointer-events:none;}
-    .step strong{position:relative!important;z-index:1!important;width:66px!important;height:66px!important;border-radius:22px!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;background:linear-gradient(145deg,#0D2137,#071421)!important;color:#fff!important;font-size:20px!important;font-weight:900!important;line-height:1!important;box-shadow:0 16px 30px rgba(13,33,55,.22)!important;}
-    .step strong:before{content:'PASO';font-size:9px!important;line-height:1!important;letter-spacing:.14em!important;color:#4bb8d4!important;margin-bottom:5px!important;font-weight:900!important;}
-    .step p{position:relative!important;z-index:1!important;display:flex!important;flex-direction:column!important;gap:5px!important;margin:0!important;line-height:1.35!important;}
-    .step p span{font-size:18px!important;font-weight:900!important;color:#0D2137!important;letter-spacing:-.02em!important;}
-    .step p small{font-size:14.5px!important;line-height:1.45!important;color:#5d7084!important;font-weight:600!important;}
-    .step:hover{transform:translateX(4px)!important;box-shadow:0 22px 54px rgba(13,33,55,.085)!important;}
-    @media (min-width:901px){
-      .site-header{min-height:64px!important;padding:7px clamp(18px,4vw,54px)!important;}
-      .site-header .tapizsafe-brand img{width:178px!important;height:44px!important;}
-      .hero.section-pad{padding-top:42px!important;padding-bottom:34px!important;}
-      .hero{min-height:calc(100vh - 64px)!important;grid-template-columns:.9fr 1.1fr!important;gap:clamp(30px,5vw,64px)!important;align-items:center!important;}
-      .hero-copy .eyebrow{margin-bottom:10px!important;font-size:11px!important;}
-      .hero-copy h1{font-size:clamp(48px,5.35vw,74px)!important;line-height:.93!important;margin-bottom:15px!important;letter-spacing:-.06em!important;}
-      .hero-copy .hero-lead{font-size:clamp(18px,1.35vw,21px)!important;line-height:1.43!important;max-width:590px!important;}
-      .hero-proof-list{margin:14px 0 0!important;gap:7px!important;max-width:520px!important;}
-      .hero-proof-list li{min-height:38px!important;padding:8px 12px!important;border-radius:15px!important;font-size:13.8px!important;line-height:1.15!important;box-shadow:0 8px 20px rgba(13,33,55,.045)!important;}
-      .hero-proof-list li:before{width:21px!important;height:21px!important;flex-basis:21px!important;font-size:13px!important;}
-      .hero-actions{margin:14px 0 0!important;}
-      .hero .hero-actions .btn-whatsapp{min-height:52px!important;padding:12px 24px!important;font-size:16.2px!important;}
-      .hero-card{max-width:560px!important;max-height:min(600px,68vh)!important;margin-left:auto!important;margin-right:auto!important;}
-    }
-    @media (min-width:901px) and (max-height:850px){
-      .hero-copy h1{font-size:clamp(46px,5vw,68px)!important;line-height:.92!important;margin-bottom:12px!important;}
-      .hero-copy .hero-lead{font-size:19px!important;line-height:1.38!important;}
-      .hero-proof-list{margin-top:12px!important;gap:6px!important;}
-      .hero-proof-list li{min-height:35px!important;padding:7px 11px!important;font-size:13.2px!important;}
-      .hero-actions{margin-top:12px!important;}
-      .hero .hero-actions .btn-whatsapp{min-height:50px!important;}
-      .hero-card{max-height:64vh!important;}
-    }
-    @media(max-width:900px){
-      .hero-video-card video,.hero-video{object-position:center center!important;}
-      .benefit-grid{gap:12px!important;}
-      .benefit{min-height:auto!important;padding:22px!important;border-radius:24px!important;}
-      .benefit span{margin-bottom:16px!important;}
-      .benefit h3{font-size:20px!important;}
-      .benefit p{font-size:14.8px!important;max-width:none!important;}
-      .step{grid-template-columns:62px 1fr!important;gap:13px!important;padding:15px!important;border-radius:22px!important;}
-      .step strong{width:54px!important;height:54px!important;border-radius:18px!important;font-size:16px!important;}
-      .step strong:before{font-size:7.5px!important;margin-bottom:4px!important;}
-      .step p span{font-size:16px!important;}
-      .step p small{font-size:13px!important;line-height:1.35!important;}
-    }
-  </style>
+  <script src="script.js?v=20"></script>
 </body>
 </html>
