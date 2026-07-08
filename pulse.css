@@ -1,0 +1,83 @@
+/* Organic living pulse — visible, lightweight, conversion-focused */
+.living-pulse{
+  position:fixed!important;
+  inset:0!important;
+  width:100vw!important;
+  height:100vh!important;
+  z-index:1!important;
+  pointer-events:none!important;
+  opacity:.72!important;
+  overflow:hidden!important;
+  background:
+    linear-gradient(118deg,transparent 0%,transparent 21%,rgba(75,184,212,.18) 34%,rgba(168,221,233,.26) 43%,rgba(245,166,35,.10) 54%,transparent 69%,transparent 100%);
+  background-size:230% 230%;
+  background-position:110% 50%;
+  animation:tapizLivingCurrent 17s cubic-bezier(.45,0,.2,1) infinite;
+  will-change:background-position,opacity,transform;
+}
+.living-pulse:before,
+.living-pulse:after{
+  content:"";
+  position:absolute;
+  inset:auto;
+  pointer-events:none;
+  border-radius:999px;
+  will-change:transform,opacity;
+}
+.living-pulse:before{
+  width:54vw;
+  height:54vw;
+  right:6vw;
+  top:12vh;
+  opacity:.62;
+  background:radial-gradient(circle,rgba(75,184,212,.34) 0%,rgba(168,221,233,.22) 36%,transparent 68%);
+  animation:tapizOrganicOrb 14s ease-in-out infinite alternate;
+}
+.living-pulse:after{
+  width:42vw;
+  height:42vw;
+  left:-10vw;
+  bottom:10vh;
+  opacity:.42;
+  background:radial-gradient(circle,rgba(245,166,35,.20) 0%,rgba(248,243,234,.22) 42%,transparent 72%);
+  animation:tapizWarmBreath 19s ease-in-out infinite alternate;
+}
+@keyframes tapizLivingCurrent{
+  0%{background-position:120% 42%;opacity:.50;transform:translate3d(0,0,0) scale(1)}
+  38%{background-position:56% 50%;opacity:.78;transform:translate3d(-1.2vw,-.6vh,0) scale(1.015)}
+  68%{background-position:18% 57%;opacity:.62;transform:translate3d(.8vw,.4vh,0) scale(1.01)}
+  100%{background-position:-22% 48%;opacity:.54;transform:translate3d(0,0,0) scale(1)}
+}
+@keyframes tapizOrganicOrb{
+  0%{transform:translate3d(6vw,2vh,0) scale(.92);opacity:.42}
+  45%{transform:translate3d(-4vw,-3vh,0) scale(1.05);opacity:.70}
+  100%{transform:translate3d(-9vw,4vh,0) scale(.98);opacity:.52}
+}
+@keyframes tapizWarmBreath{
+  0%{transform:translate3d(-5vw,4vh,0) scale(.95);opacity:.30}
+  50%{transform:translate3d(8vw,-2vh,0) scale(1.08);opacity:.48}
+  100%{transform:translate3d(13vw,2vh,0) scale(1);opacity:.38}
+}
+.hero-video-card{
+  animation:tapizVideoAlive 7.8s ease-in-out infinite!important;
+}
+.hero .btn-whatsapp,
+.float-whatsapp{
+  animation:tapizCtaAlive 6.8s ease-in-out infinite!important;
+}
+@keyframes tapizVideoAlive{
+  0%,100%{box-shadow:0 24px 80px rgba(13,33,55,.14),0 0 0 0 rgba(75,184,212,0)}
+  52%{box-shadow:0 30px 92px rgba(13,33,55,.16),0 0 0 3px rgba(75,184,212,.20),0 0 34px rgba(75,184,212,.16)}
+}
+@keyframes tapizCtaAlive{
+  0%,100%{box-shadow:0 14px 30px rgba(37,211,102,.24),0 0 0 0 rgba(37,211,102,0)}
+  50%{box-shadow:0 20px 44px rgba(37,211,102,.36),0 0 0 8px rgba(37,211,102,.10)}
+}
+@media(max-width:900px){
+  .living-pulse{opacity:.58!important;background-size:260% 260%;animation-duration:19s}
+  .living-pulse:before{width:88vw;height:88vw;right:-24vw;top:22vh;opacity:.48}
+  .living-pulse:after{width:70vw;height:70vw;left:-30vw;bottom:20vh;opacity:.36}
+}
+@media(prefers-reduced-motion:reduce){
+  .living-pulse,.living-pulse:before,.living-pulse:after,.hero-video-card,.hero .btn-whatsapp,.float-whatsapp{animation:none!important}
+}
