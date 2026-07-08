@@ -65,8 +65,10 @@
         </div>
       </div>
       <div class="hero-visual reveal delay-1">
-        <div class="image-card hero-card">
-          <img src="assets/stain.webp?v=5" alt="Impermeabilizante de tapices aplicado en sofá con derrame visible" />
+        <div class="image-card hero-card hero-video-card">
+          <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/stain.webp?v=5" aria-label="Video de TapizSafe mostrando protección textil en sofá">
+            <source src="assets/tapizsafe-hero-muted.mp4?v=1" type="video/mp4" />
+          </video>
           <div class="halo"></div>
         </div>
       </div>
@@ -183,6 +185,9 @@
 
   <script src="script.js?v=16"></script>
   <style id="tapizsafe-fold-fix">
+    .hero-video-card{position:relative;overflow:hidden;background:#f6fbfc!important;}
+    .hero-video-card video,.hero-video{width:100%!important;height:100%!important;display:block!important;object-fit:cover!important;object-position:center center!important;background:#f6fbfc!important;}
+    .hero-video-card:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,.03),rgba(75,184,212,.04),rgba(245,166,35,.04));}
     @media (min-width:901px){
       .site-header{min-height:64px!important;padding:7px clamp(18px,4vw,54px)!important;}
       .site-header .tapizsafe-brand img{width:178px!important;height:44px!important;}
@@ -206,6 +211,9 @@
       .hero-actions{margin-top:12px!important;}
       .hero .hero-actions .btn-whatsapp{min-height:50px!important;}
       .hero-card{max-height:64vh!important;}
+    }
+    @media(max-width:900px){
+      .hero-video-card video,.hero-video{object-position:center center!important;}
     }
   </style>
 </body>
