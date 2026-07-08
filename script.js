@@ -52,7 +52,7 @@ if(heroVideo){
   heroVideo.setAttribute('playsinline','');
   heroVideo.setAttribute('webkit-playsinline','');
   heroVideo.preload = 'auto';
-  heroVideo.src = 'assets/tapizsafe-hero-muted%282%29.mp4?v=4';
+  heroVideo.src = 'assets/tapizsafe-hero-muted.mp4?v=5';
   heroVideo.load();
   const tryPlay = () => {
     const promise = heroVideo.play();
